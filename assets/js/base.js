@@ -1,16 +1,55 @@
   
   
+
   
-  	// logo
+  
+  
+  
+  	// logo -webkit- grid-img getElementsByClassName("example")
   	window.onscroll = function() { scrollFunction() };
 
 	function scrollFunction() {
-	  if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+	  if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 30) {
 		document.getElementById("logo").style.width = "30%";
+		//document.querySelectorAll(".grid-img").filter = "grayscale(0%)";
+		//document.getElementsByClassName("grid-img").-webkit-filter = "grayscale(0%)";
+		//let imagenes = document.querySelectorAll("a > img")
+		//imagenes.style.filter = 'grayscale(0%)';
+		
+		//recorre todas las img
+		var el = document.querySelectorAll('img');
+			for(var i=0;i<el.length;i++){
+  			el[i].style.filter = 'grayscale(0%)';
+		}
+		
+		//const note = document.querySelector('.grid-img');
+		//note.style.filter = 'grayscale(0%)';
+
 	  } else {
 		document.getElementById("logo").style.width = "40%";
+		//document.querySelectorAll(".grid-img").filter = "grayscale(100%)";
+		//document.getElementsByClassName("grid-img").-webkit-filter = "grayscale(100%)";
+		//const note = document.querySelector('.grid-img');
+		//note.style.filter = 'grayscale(100%)';
+		
+		//recorre todas las img
+		var el = document.querySelectorAll('img');
+			for(var i=0;i<el.length;i++){
+  			el[i].style.filter = 'grayscale(100%)';
+		}
+
 	  }
 	}
+	
+	
+
+
+
+
+
+
+
+
 
 
   	// diseño texto
